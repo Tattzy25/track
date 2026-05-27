@@ -1,19 +1,15 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <Card className="w-full pb-1">
-      <CardHeader>
-        <CardTitle>Request Balance</CardTitle>
-      </CardHeader>
-      <CardContent className="text-base">
-        <Button className="h-[18px] text-[16px]">REQUEST</Button>
+    <Card className="w-full py-[1px]">
+      <CardContent className="text-base flex items-center gap-2">
+        <Button className="h-auto flex-col gap-[2px] text-[16px] [&>span]:leading-none" style={{paddingTop:"2px",paddingBottom:"2px"}}>
+          <span>REQUEST</span>
+          <span>BALANCE</span>
+        </Button>
+        <span className={`text-[32px] ${parseFloat("0000") < 0 ? "text-red-500" : ""}`}>0000</span>
       </CardContent>
     </Card>
   );
