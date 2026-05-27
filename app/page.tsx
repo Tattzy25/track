@@ -4,15 +4,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <Card className="w-full bg-[#ffffff] text-[#000000]">
+    <Card className="w-full pb-1">
       <CardHeader>
-        <CardTitle>Project Overview</CardTitle>
+        <CardTitle>Request Balance</CardTitle>
       </CardHeader>
       <CardContent className="text-base">
-        000
+        <Button className="h-[18px] text-[16px]">REQUEST</Button>
       </CardContent>
     </Card>
   );
